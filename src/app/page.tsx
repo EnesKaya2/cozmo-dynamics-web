@@ -1169,7 +1169,7 @@ function Header() {
     <a href="#" className="flex items-center gap-3 group">
       <div className="relative h-9 w-9 md:h-10 md:w-10">
         <Image
-          src="/cozmodynamics-logo.png"   // public/cozmodynamics-logo.png
+          src="/cozmodynamics.png"   // public/cozmodynamics-logo.png
           alt="CozmoDynamics logo"
           fill
           priority
