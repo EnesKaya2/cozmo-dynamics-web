@@ -528,10 +528,10 @@ export function DeviceControlSVG() {
 
       <g opacity="0.8">
         <rect x="120" y="10" width="60" height="15" rx="7" fill="url(#control-center-gradient)" opacity="0.3" />
-        <text x="150" y="22" textAnchor="middle" fill="#21ffd7" fontSize="10">
-          {" "}"Işıkları Aç"{" "}
-          <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
-        </text>
+<text x="150" y="22" textAnchor="middle" fill="#21ffd7" fontSize="10">
+  {' "Işıkları Aç" '}
+  <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+</text>
       </g>
     </svg>
   );
@@ -990,6 +990,7 @@ function NeuralBackground() {
 
     let animationFrameId = 0;
     function animate() {
+      if (!ctx || !canvas) return;
       ctx.fillStyle = brand.dark;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -1078,6 +1079,7 @@ function SpotlightCanvas() {
 
     let raf = 0;
     function draw() {
+      if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const gradient = ctx.createRadialGradient(
         mouse.x,
@@ -1638,9 +1640,9 @@ export default function ArcadiaLandingPage() {
             transition={{ duration: 0.7 }}
             className="text-center max-w-3xl"
           >
-            <h2 className="text-4xl md:text-5xl font-bold">Arcadia'nın 7 Gücü</h2>
-            <p className="mt-4 text-lg text-white/70">
-              Arcadia'yı sıradan bir asistandan ayıran, onu geleceğin teknolojisi yapan temel yeteneklerini keşfetmek için aşağı kaydırın.
+          <h2 className="text-4xl md:text-5xl font-bold">{"Arcadia'nın 7 Gücü"}</h2>
+          <p className="mt-4 text-lg text-white/70">
+          {"Arcadia'yı sıradan bir asistandan ayıran, onu geleceğin teknolojisi yapan temel yeteneklerini keşfetmek için aşağı kaydırın."}
             </p>
             <div className="mt-8">
               <svg width="40" height="60" viewBox="0 0 40 60" className="mx-auto">
